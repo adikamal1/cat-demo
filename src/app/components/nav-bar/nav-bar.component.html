@@ -1,0 +1,12 @@
+<nav class="nav-bar" #navElem>
+    <i class="fa fa-bars" aria-hidden="true" (click)="showLinks = !showLinks"></i>
+    <span class="title">{{ selectedLink}}</span>
+    <i class="fa fa-menu" aria-hidden="true"></i>
+    <section class="links" [ngClass]="{ 'drop-nav': showLinks }">
+        <ul class="link-list">
+            <li class="link-item" *ngFor="let link of links">
+                <a [routerLink]="link.toLowerCase().split(' ').join('_')" (click)="onLinkClick(link)">{{ link }}</a>
+            </li>
+        </ul>
+    </section>
+</nav>

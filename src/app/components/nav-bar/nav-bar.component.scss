@@ -1,0 +1,86 @@
+.nav-bar {
+  background: #007cb0;
+  color: white;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  align-items: center;
+  padding: 0px 5px;
+  transition: background 200ms ease-in-out 0s;
+  box-sizing: border-box;
+
+  .title {
+    font-size: 2em;
+    font-weight: 900;
+  }
+  .links {
+    opacity: 0;
+    max-height: 0px;
+    left: 0px;
+    top: 100%;
+    position: absolute;
+    z-index: 90;
+    transition: max-height 300ms ease-in-out 0s, opacity 600ms ease-in-out 0s,
+      background 200ms ease-in-out 0s;
+    .link-list {
+      display: none;
+      box-sizing: border-box;
+    }
+    &.drop-nav {
+      max-height: 124px;
+      opacity: 1;
+      background: inherit;
+      width: 100%;
+      .link-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
+        font-weight: 600;
+        padding: 0;
+        margin: 0;
+        .link-item {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          list-style: none;
+          height: 40px;
+          cursor: pointer;
+          transition: transform 200ms ease-in-out 0s;
+          a {
+            font-variant: normal;
+            color: inherit;
+            text-decoration: none;
+            outline: none;
+            user-select: none;
+            width: 100%;
+            text-align: center;
+          }
+          &:hover {
+            background-color: #1e2225;
+          }
+        }
+      }
+    }
+  }
+}
+.fa-bars,
+.fa-menu {
+  cursor: pointer;
+  transition: transform 200ms ease-in-out 0s;
+  margin-left: 2%;
+  font-size: 2.5em;
+  &:hover {
+    color: #e6e6e6;
+    transform: scale(1.2);
+  }
+}
+.fa-menu {
+  margin-right: 20px;
+  font-size: 1.5em;
+}

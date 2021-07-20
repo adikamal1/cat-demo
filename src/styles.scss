@@ -1,1 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 400;
+	src: local("Roboto"), url("./assets/fonts/Roboto-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  src: url("./assets/fonts/fa-solid-900.woff") format("woff");
+}
+.fa,
+.fas,
+.far,
+.fal,
+.fad,
+.fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+.fa,
+.fas {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.far {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+}
+.fa-bars:before {
+  content: "\f0c9";
+}
+.fa-menu:before {
+  content: "\f142";
+}
+.fa-bullseye:before {
+  content: "\f140";
+}
+.fa-star:before {
+  content: "\f005";
+}
+.fa-pen:before {
+  content: "\f304";
+}
+.fa-cancel:before {
+  content: "\f00d";
+}
+.fa-heart:before {
+  content: "\f004";
+}
+.fa-fish:before {
+  content: "\f578";
+}
+
+body {
+	font-family: Roboto, "Times New Roman", Times, serif;
+	font-size: 16px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.card {
+  width: 344px;
+  height: 256px;
+  box-shadow: 0px 2px 10px #00000029;
+}

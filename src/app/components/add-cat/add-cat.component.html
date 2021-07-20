@@ -1,0 +1,45 @@
+<div class="main-container">
+    <!-- <div class="cat-form"> -->
+        <form #catForm="ngForm" class="cat-form">
+            <div class="title-container">
+                <label class="label" for="title">Title</label>
+                <input id="title" for="title" name="title" [(ngModel)]="formInput.title" type="text" />
+            </div>
+            <div class="rating-container">
+                <label class="label">Rating</label>
+                <app-rating (selectedRating)="onRatingClick($event)"></app-rating>
+            </div>
+            <div class="img-container">
+                <img [src]="formInput.imgUrl">
+                <!-- <input type="file" name="file" id="file" (change)="onFileChanged($event)" > -->
+                <div class="upload-container">
+                    <input style="display: none;" type="file" name="file" id="file" (change)="onFileChanged($event)">
+                    <label class="primary" style="padding-left: 10px;" for="file">Upload Image</label>
+                    <div>
+                        <button class="secondary" (click)="onImageCancel()">
+                            Cancel
+                        </button>
+                        <button class="primary" (click)="onImageSave()">
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="location-container">
+                <div class="location-tag">
+                    <i class="fa fa-bullseye"></i>
+                    <div class="location-labels">
+                        <span class="primary-text"> Add location</span>
+                        <span class="secondary-text">You can't track me</span>
+                    </div>
+                </div>
+                <div class="location">
+
+                </div>
+                <div class="secondary-text">Location Details</div>
+                <button class="setLoc" (click)="setLocation()">Set current location</button>
+            </div>
+            <button class="submit" (click)="onSubmit()">Submit</button>
+        </form>
+    <!-- </div> -->
+</div>

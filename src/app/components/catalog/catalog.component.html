@@ -1,0 +1,10 @@
+<div class="main-container">
+    <div class="card-container">
+        <app-card class="cat-card" *ngFor="let item of catDetails" [details]="item"></app-card>
+    </div>
+    <div class="floating-buttons">
+        <div class="img-buttons" *ngFor="let item of floatButtons">
+            <i [class]="'fa fa-'+item.icon"></i>
+        </div>
+    </div>
+</div>
